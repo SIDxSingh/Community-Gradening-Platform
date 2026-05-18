@@ -1,59 +1,132 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌿 UrbanRoots — Community Gardening & Plant Encyclopedia Platform
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-11-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel 11">
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+  <img src="https://img.shields.io/badge/WebSockets-Reverb-8B5CF6?style=for-the-badge&logo=pusher&logoColor=white" alt="Laravel Reverb">
+  <img src="https://img.shields.io/badge/UI-Bento%20Grid-10B981?style=for-the-badge" alt="Bento Grid UI">
 </p>
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📖 Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**UrbanRoots** is a premium, modern web platform designed to transform urban spaces into thriving green ecosystems. Built with a sleek **"Bento-Grid" aesthetic**, UrbanRoots bridges the gap between passionate urban farmers, local neighbourhood communities, and green-thumb enthusiasts.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Whether you want to discover a rooftop garden in your city, explore an extensive botanical encyclopedia, or chat in real-time with local garden organizers, UrbanRoots provides all the tools and community connections in one seamless, high-performance application.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## ✨ Key Features
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🌱 Community Garden Directory & Feed
+* **Explore & Discover:** Browse an Instagram-style community feed of beautiful gardens submitted by neighbours.
+* **Propose a Garden:** Share your own rooftop, backyard, or vacant lot project complete with photo uploads, size metrics, and location tags.
+* **Interactive Engagement:** Support fellow gardeners through real-time likes and comments.
 
-## Laravel Sponsors
+### 🌿 MongoDB-Powered Plant Encyclopedia
+* **Rich Botanical Database:** Search and explore hundreds of plant species with detailed growing tips, sunlight requirements, and care guides.
+* **Polyglot Persistence:** Leveraging MongoDB's flexible document structure for high-speed botanical cataloging while maintaining relational integrity for user transactions.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 💬 Real-Time Live Chat & Push Notifications
+* **Instant Messaging:** Connect directly with garden owners to ask questions, coordinate seed swaps, or organize community workdays.
+* **Laravel Reverb WebSockets:** Lightning-fast, self-hosted WebSocket broadcasting powered by Laravel Echo and Reverb.
+* **Multi-Layer Notifications:** 
+  * **🔴 Live Unread Badges:** Dynamic pulsing badges update instantly on your screen when new messages arrive.
+  * **🔔 Browser Push Notifications:** Get OS-level desktop pop-ups for incoming messages even when your chat panel is closed or you are on another tab.
 
-### Premium Partners
+### 🎨 Premium Bento-Box UI/UX
+* **Modern Aesthetic:** High-contrast, beautifully structured bento grids with smooth glassmorphic cards and curated typography.
+* **Micro-Animations:** Fluid hover transitions, interactive reveal animations, and a polished dark-mode hero header on every page.
+* **Fully Responsive:** Optimized layouts using modern CSS `clamp()` and CSS Grid to look stunning on mobile, tablet, and desktop screens.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🛡️ Admin Moderation & Security
+* **Role-Based Access Control:** Secure administration dashboard for monitoring platform activity and approving pending garden proposals.
+* **Content Moderation:** Instant admin deletion capabilities across community posts and garden submissions.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🏗️ Architecture & Tech Stack
 
-## Code of Conduct
+UrbanRoots demonstrates an advanced **Polyglot Persistence (Dual-Database)** architecture combined with state-of-the-art real-time broadcasting:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* **Backend Framework:** Laravel 11 (PHP 8.2+)
+* **Primary Relational DB (SQLite):** Manages relational entities including `Gardens`, `Messages`, `Comments`, and `Likes`.
+* **Document NoSQL DB (MongoDB):** Powers the high-performance `Plant` Encyclopedia and `User` authentication profiles.
+* **Hybrid Eloquent Relations:** Seamless cross-database Eloquent queries utilizing `MongoDB\Laravel\Eloquent\HybridRelations`.
+* **Real-Time Engine:** Laravel Reverb (WebSockets) + Pusher JS client.
+* **Frontend:** Custom Vanilla CSS Design System + Blade Templating + Vanilla JS for reactive UI components.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🚀 Getting Started
 
-## License
+### Prerequisites
+* PHP 8.2 or higher
+* Composer
+* Node.js & npm
+* MongoDB Server (Local or Atlas)
+* SQLite extension enabled
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/SIDxSingh/Community-Gradening-Platform.git
+   cd Community_Garden
+   ```
+
+2. **Install PHP dependencies:**
+   ```bash
+   composer install
+   ```
+
+3. **Install Frontend dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Environment Configuration:**
+   Copy the example environment file and configure your database connections:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   *Make sure your `MONGODB_URI` is correctly set in the `.env` file.*
+
+5. **Run Migrations & Seeders:**
+   ```bash
+   php artisan migrate --seed
+   ```
+
+6. **Start the Application Servers:**
+   You will need two terminal windows to run the web server and the WebSocket server simultaneously:
+
+   * **Terminal 1 (Web Server):**
+     ```bash
+     php artisan serve
+     ```
+   * **Terminal 2 (WebSocket Server):**
+     ```bash
+     php artisan reverb:start
+     ```
+   * *(Optional) For frontend asset compilation:* `npm run dev`
+
+7. **Visit the App:** Open `http://localhost:8000` in your browser.
+
+---
+
+## 👥 Meet the Creators
+
+UrbanRoots was crafted by a dedicated team of developers, urban farmers, and community organizers:
+
+* **Mohammad Tabish** — Co-Founder & CTO
+* **Siddharth Shukla** — Co-Founder & Head of Community
+* **Chintamani** — Co-Founder & Lead Developer
+
+---
+
+## 📜 License
+
+This project is open-source software licensed under the [MIT License](https://opensource.org/licenses/MIT).
