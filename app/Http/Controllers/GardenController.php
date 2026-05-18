@@ -54,26 +54,17 @@ class GardenController extends Controller
         return redirect()->route('gardens.index')->with('success', $msg);
     }
 
-    /**
-     * Display the specified garden.
-     */
-    public function show(Garden $garden) // Demonstrating Unit X: Implicit Route Model Binding
+    public function show(Garden $garden)
     {
         $garden->load(['comments', 'likes', 'user']);
         return view('gardens.show', compact('garden'));
     }
 
-    /**
-     * Show the form for editing the specified garden.
-     */
     public function edit(Garden $garden)
     {
         return view('gardens.edit', compact('garden'));
     }
 
-    /**
-     * Update the specified garden in storage.
-     */
     public function update(Request $request, Garden $garden)
     {
         $validated = $request->validate([
@@ -88,17 +79,14 @@ class GardenController extends Controller
             $validated['image'] = $request->file('image')->store('gardens', 'public');
         }
 
-        $garden->update($validated); // Demonstrating Unit X: Eloquent ORM (Updating)
+        $garden->update($validated);
 
         return redirect()->route('gardens.index')->with('success', 'Garden updated successfully.');
     }
 
-    /**
-     * Remove the specified garden from storage.
-     */
     public function destroy(Garden $garden)
     {
-        $garden->delete(); // Demonstrating Unit X: Eloquent ORM (Deleting)
+        $garden->delete();
 
         return redirect()->route('gardens.index')->with('success', 'Garden deleted successfully.');
     }

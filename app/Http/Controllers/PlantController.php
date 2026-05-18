@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Plant;
 
-// Demonstrating Unit X: Controllers & Eloquent CRUD (MongoDB)
 class PlantController extends Controller
 {
     public function index()

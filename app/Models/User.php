@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use MongoDB\Laravel\Auth\User as Authenticatable;
 
-// Demonstrating Polyglot Persistence: User model now stored in MongoDB
 class User extends Authenticatable
 {
     use Notifiable;

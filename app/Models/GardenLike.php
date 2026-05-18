@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-// Demonstrating Polyglot Persistence: Likes stored in SQLite
 class GardenLike extends Model
 {
     protected $connection = 'sqlite';
